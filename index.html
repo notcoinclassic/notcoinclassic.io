@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notcoin Classic</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1>
+                Notcoin Classic
+            </h1>
+            <div class="rotate">
+                <img src="https://github.com/notcoinclassic/notcoinclassic_logo/blob/main/nc-logo-transparent.png?raw=true" alt="" class="nc-logo-transparent">
+            </div>
+            
+            <div class="coin-info">
+                <p>A next generation cryptocurrency on the TON blockchain. Born from the legendary Notcoin. This isn't just another coin - it's Classic.</p>
+                <h2>Probably Nothing, <br /> But Classic.</h2>
+            </div>
+
+            <div class="social">
+                <a href="https://x.com/ton_notc?s=09"><img src="icons/twitter.png" alt=""></a>
+                <a href="https://t.me/notcoinclassic_notc"><img src="icons/telegram.png" alt=""></a>
+            </div>
+            
+            <div class="copy-text-container">
+                <p>Contract address:</p>
+                <div class="copy-text" id="text-to-copy" >EQBMCewsVueL-iU5NnUJ1fwHcGaulxdJBSPK4fTBrKJ-3N6v</div>
+                <button onclick="autoCopy()">Copy</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function autoCopy() {
+            const text = document.getElementById("text-to-copy").textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied: " + text);
+            }).catch(err => {
+                alert("Error copying text: " + err);
+            });
+        }
+    </script>
+</body>
+</html>
